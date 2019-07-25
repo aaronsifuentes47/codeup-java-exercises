@@ -31,5 +31,20 @@ public class ControlFlowExercises {
         System.out.println("enter a limit: ");
         int userNum = scanner.nextInt();
         fizzBuzz(userNum);
+
+        System.out.println("Enter your grade: ");
+        int grade = scanner.nextInt();
+
+        if (grade < 59) {
+            System.out.println("can I get an F in chat");
+        } else if (grade > 59 && grade <= 68) {
+            System.out.println("Hey! You barely made it! D for you.");
+        } else if (grade >= 68 && grade <= 79) {
+            System.out.println("It's a C! Not bad.");
+        } else if (grade > 79 && grade <= 87) {
+            System.out.println("Bingo! You got a B.");
+        } else if (grade > 87) {
+            System.out.println("Look at you mister show off. A.");
+        }
     }
 }
