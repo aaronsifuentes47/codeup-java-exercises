@@ -31,6 +31,19 @@ public class ControlFlowExercises {
         System.out.println("enter a limit: ");
         int userNum = scanner.nextInt();
         fizzBuzz(userNum);
+        System.out.println();
+
+        System.out.println("What number would you like to go up to?");
+        int uInum = scanner.nextInt();
+        System.out.println();
+        System.out.println( "Here is the table: ");
+        System.out.println();
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------- | -----");
+        for (long q = 1; q <= uInum; q++) {
+            System.out.printf("%-7d|%-9d|%-8d%n", q, q*q, q*q*q);
+        }
+        System.out.println();
 
         System.out.println("Enter your grade: ");
         int grade = scanner.nextInt();
