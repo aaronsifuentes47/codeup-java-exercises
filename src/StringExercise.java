@@ -14,6 +14,7 @@ public class StringExercise {
                 ", wielding styled hair \nand a polished leather jacket. He seems" +
                 " somewhat distraught, but he approaches you cautiously and slowly.");
                 int i = 0;
+                int flee = 0;
         do {
             System.out.println("What do you say?");
 
@@ -32,6 +33,7 @@ public class StringExercise {
                 System.out.println("\"Don't ask questions!\"");
             } else if (question.endsWith("!")){
                 System.out.println("\"Shut up! Do you want them to hear us?!\"");
+                flee++;
             } else if (question.contains("hears us") || question.contains("them")) {
                 System.out.println("\"Them. The creatures. They've been chasing me for -- nevermind.\"");
             } else if(question.contains("creatures") || question.contains("no one here") || question.contains("no one")) {
