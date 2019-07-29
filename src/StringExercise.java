@@ -9,7 +9,8 @@ public class StringExercise {
 //        message += "I can do backslashes \\, double backslashes \\\\, and triple backslashes! \\\\\\\n";
 //        System.out.println(message);
         Scanner scanner = new Scanner(System.in);
-        System.out.println("A frenetic teen approaches you, wielding styled hair and a polished leather jacket. He seems\n" +
+        System.out.println("A frenetic teen approaches you, emerging from behind the trees" +
+                ", wielding styled hair \nand a polished leather jacket. He seems" +
                 "somewhat distraught, but he approaches you cautiously and slowly.");
                 int i = 0;
         do {
@@ -24,13 +25,15 @@ public class StringExercise {
                 System.out.println("\"Nothing.\"");
             } else if (question.contains("what are you doing") || question.contains("you doing")) {
                 System.out.println("\"Running. From them.\"");
+            } else if(question.contains("where are you") || question.contains("you going")) {
+                System.out.println("\"Anywhere that's away from them. It's not safe in this town anymore.\"");
             } else if (question.endsWith("?")) {
-                System.out.println("\"Don't ask questions! I hate questions.\"");
+                System.out.println("\"Don't ask questions!\"");
             } else if (question.endsWith("!")){
                 System.out.println("\"Shut up! Do you want them to hear us?!\"");
-            } else if (question.contains("hears us")) {
+            } else if (question.contains("hears us") || question.contains("them")) {
                 System.out.println("\"Them. The creatures. They've been chasing me for -- nevermind.\"");
-            } else if(question.contains("them")|| question.contains("creatures") || question.contains("no one here") || question.contains("no one")) {
+            } else if(question.contains("creatures") || question.contains("no one here") || question.contains("no one")) {
                 System.out.println("\"I didn't get a good look at them, but they're out there. Watching. Waiting. " +
                         "Don't walk in the dark alone.\"");
             } else if (question.contains("bye")) {
