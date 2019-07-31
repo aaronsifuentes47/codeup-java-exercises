@@ -30,14 +30,12 @@ public class Input {
         System.out.printf("Please enter a number between %d and %d: \n", min, max);
         do {
             answer = getInt();
-
             if (answer >= min && answer <= max) {
                 return answer;
             } else {
                 System.out.printf("Invalid input. Please enter a number between %d and %d.\n", min, max);
             }
         } while (true);
-
     }
 
     public double getDouble() {
