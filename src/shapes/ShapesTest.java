@@ -12,12 +12,14 @@ public class ShapesTest {
 
         Measurable myShape;
 
-        Square box = new Square(5);
-        Rectangle longBox = new Rectangle(5,10);
+        Measurable box = new Square(5);
+        Measurable longBox = new Rectangle(5,10);
 
         myShape = box;
 
-        System.out.println(myShape);
-        System.out.println(longBox);
+        System.out.println("area of square: " + myShape.getArea());
+        System.out.println("area of rectangle: " + longBox.getArea());
+        System.out.println("perimeter of square: "+ myShape.getPerimeter());
+        System.out.println("perimeter of rectangle: "+ longBox.getPerimeter());
     }
 }
