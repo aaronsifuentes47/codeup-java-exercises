@@ -5,17 +5,17 @@ import java.util.HashMap;
 
 public class Student {
 
-    private ArrayList<Integer> grades = new ArrayList<>();
     private String name;
+    private ArrayList<Integer> grades;
 
 
     public Student(String name) {
+        grades = new ArrayList<>();
         this.name = name;
     }
 
-    public String getName(String name) {
-        this.name = name;
-        return name;
+    public String getName() {
+        return this.name;
     }
 
     public void addGrade(int grade) {
@@ -34,13 +34,13 @@ public class Student {
 
     public static void main(String[] args) {
 
-        Student mike = new Student("mike");
-
-        mike.addGrade(87);
-        mike.addGrade(70);
-        mike.addGrade(90);
-
-        System.out.println(mike.getGradeAverage());
+//        Student mike = new Student("Mike");
+//
+//        mike.addGrade(87);
+//        mike.addGrade(70);
+//        mike.addGrade(90);
+//
+//        System.out.println("Mike's grade average is: \n" + mike.getGradeAverage());
 
     }
 
