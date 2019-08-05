@@ -8,6 +8,9 @@ public class Student {
     private String name;
     private ArrayList<Integer> grades;
 
+    public ArrayList<Integer> getGrades() {
+        return grades;
+    }
 
     public Student(String name) {
         grades = new ArrayList<>();

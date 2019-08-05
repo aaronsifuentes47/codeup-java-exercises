@@ -48,6 +48,7 @@ public class GradesApplication {
             if (students.containsKey(query)) {
                 System.out.println("| " + query + " |");
                 System.out.println("Student Name: " + students.get(query).getName());
+                System.out.println("Grades: " + students.get(query).getGrades());
                 System.out.println("Grade average: "+ students.get(query).getGradeAverage());
                 System.out.println("continue?: [y/n]");
                 String answer = scan.nextLine();
