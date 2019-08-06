@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Input {
     private Scanner scanner = new Scanner(System.in);
 
+    @SuppressWarnings("all")
     public String getString() {
-        System.out.println("Say something: ");
         String userInput = scanner.nextLine();
-        System.out.println("You said: " + userInput);
         return userInput;
 
     }
 
+    @SuppressWarnings("all")
     public boolean yesNo() {
         System.out.println("continue?: [y/n]");
         String answer = scanner.nextLine();
@@ -25,6 +25,7 @@ public class Input {
 
     }
 
+    @SuppressWarnings("all")
     public int getInt(int min, int max) {
         int answer = 0;
         System.out.printf("Please enter a number between %d and %d: \n", min, max);
@@ -42,6 +43,7 @@ public class Input {
         return scanner.nextDouble();
     }
 
+    @SuppressWarnings("all")
     public double getDouble(double min, double max) {
         double answer;
         System.out.printf("Enter a number between %f and %f: ", min, max);
