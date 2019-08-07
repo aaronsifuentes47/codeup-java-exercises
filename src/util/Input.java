@@ -5,32 +5,35 @@ import java.util.Scanner;
 public class Input {
     private Scanner scanner = new Scanner(System.in);
 
-    @SuppressWarnings("all")
     public String getString() {
         String userInput = scanner.nextLine();
         return userInput;
-
     }
-
-    @SuppressWarnings("all")
     public boolean yesNo() {
         System.out.println("continue?: [y/n]");
         String answer = scanner.nextLine();
-        return (answer.toLowerCase().contains("yes") || answer.toLowerCase().contains("y"));
-
+        return (answer.toLowerCase().contains("yes") || answer.toLowerCase().equalsIgnoreCase("y"));
     }
-
     public int getInt() {
-        return scanner.nextInt();
-
+        int userInput = 0;
+        try {
+            userInput = Integer.valueOf(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("this is an error, please try again: ");
+           return getInt();
+        }
+        return userInput;
     }
-
-    @SuppressWarnings("all")
     public int getInt(int min, int max) {
         int answer = 0;
         System.out.printf("Please enter a number between %d and %d: \n", min, max);
         do {
-            answer = getInt();
+            try {
+            answer = Integer.valueOf(scanner.nextLine());
+            } catch (NumberFormatException e){
+                System.out.println("BAD NUMBER BAD NUMBER BAD NUMBER");
+                continue;
+            }
             if (answer >= min && answer <= max) {
                 return answer;
             } else {
@@ -40,15 +43,26 @@ public class Input {
     }
 
     public double getDouble() {
-        return scanner.nextDouble();
+        double userInput = 0;
+        try {
+            userInput = Double.valueOf(scanner.nextLine());
+        } catch (NumberFormatException e){
+            System.out.println("this is an error, please try again: ");
+            return getDouble();
+        }
+        return userInput;
     }
 
-    @SuppressWarnings("all")
     public double getDouble(double min, double max) {
         double answer;
         System.out.printf("Enter a number between %f and %f: ", min, max);
         do {
-            answer = getDouble();
+            try {
+            answer = Double.valueOf(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("BAD NUMBER BAD NUMBER BAD NUMBER");
+                continue;
+            }
             if (answer >= min && answer <= max) {
                 return answer;
             } else {
